@@ -1,5 +1,5 @@
 <?php
-require __dir__.'/SEED_CBC_HCS.php';
+require __dir__.'/SEED_CBC_TransKey.php';
 
 class TransKey
 {
