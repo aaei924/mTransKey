@@ -321,6 +321,9 @@ class TransKey
         return substr($encodedDataString, 0, strlen($encodedDataString) - 1);
     }
 
+    /*
+     * Send HTTP Request.
+     */
     private static function fetch($url, $body = null, $header=[], $method='POST')
     {
         $ch = curl_init();
@@ -352,6 +355,9 @@ class TransKey
         return (object)['headers' => $headers, 'body' => $body];
     }
 
+    /*
+     * Parse HTTP Response header.
+     */
     private static function parseHeader(string $haystack): array
     {
         $headerset = explode('\r\n\r\n', $haystack);
