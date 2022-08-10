@@ -35,6 +35,9 @@ class SEED
         return 0x000000ff & self::uRShift($A, 24);
     }
     
+    /*
+     * to handle int overflow
+     */
     private static function int32($n) {
         return ($n & 0x80000000) >> 31 ? -0x80000000 | ($n & 0x7FFFFFFF) : $n & 0x7FFFFFFF;
     }
